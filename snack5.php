@@ -10,13 +10,57 @@
     
     
     <h1>
-        Snack 7
+        Snack 5
     </h1>
 
     <!-- Creare un array contenente qualche alunno di un'ipotetica classe. 
     Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. 
     Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
 
+
+    <?php
+        $class = [
+            [
+                'name' => 'Johnny',
+                'last name' => 'Stecchino',
+                'votes' => [
+                    'math' => 7,
+                    'english' => 8,
+                    'science' => 7,
+                ],
+            ],
+            [
+                'name' => 'Johnny',
+                'last name' => 'Depp',
+                'votes' => [
+                    'math' => 6,
+                    'english' => 10,
+                    'science' => 7,
+                ],
+            ],
+            [
+                'name' => 'Leila',
+                'last name' => 'Skywalker',
+                'votes' => [
+                    'math' => 10,
+                    'english' => 10,
+                    'science' => 10,
+                ],
+            ],
+        ];
+    ?>
+
+    <ul>
+        <?php for ($i=0; $i < count($class); $i++) {?>
+
+            <li>
+                <?php
+                    echo $class[$i]['name'];   
+                ?>
+            </li>
+
+        <?php } ?>
+    </ul>
 
 </body>
 </html>
