@@ -17,19 +17,18 @@
 
     <h5>
         <?php
-        $numbers = [];
+            $numbers = [];
 
-        // while(count($numbers) < 15){
-        //     $randNum = rand(1, 300);
+            while(count($numbers) < 15){
 
-        //     // if(!in_array($randNum, $numbers)){
+                $randNum = rand(1, 300);
 
-        //     // }
+                if(!in_array($randNum, $numbers)){
+                    array_push($numbers, $randNum);
+                }
+            }
 
-        //     var_dump($array);
-
-
-        // }
+            var_dump($numbers);
         ?>
     </h5>
 </body>
