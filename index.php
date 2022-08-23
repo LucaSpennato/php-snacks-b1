@@ -57,13 +57,23 @@
         ];
         ?>
 
-    </p>
+    <ul>
+        <?php 
+            for ($i=0; $i < count($games); $i++) {  ?>
+        <li>
+            <?php
+                // for ($i = 0; $i < count($games); $i++) {
+                    echo $games[$i]['homeTeam'] . ' - ' . $games[$i]['guestTeam'] . ' | ' . $games[$i]['HTScore'] . ' - ' . $games[$i]['GTScore'];
+                // }
+            ?>
+        </li>
+
+        <?php } ?>
+    </ul>
 
     <p>
         <?php
-        for ($i = 0; $i < count($games); $i++) {
-            echo $games[$i]['homeTeam'] . ' - ' . $games[$i]['guestTeam'] . '|' . $games[$i]['HTScore'] . '-' . $games[$i]['GTScore'];
-        }
+        
         ?>
     </p>
 
@@ -160,6 +170,14 @@
     </p>
 
     <?php } ?>
+
+    <h1>
+        Snack 7
+    </h1>
+
+    <!-- Creare un array contenente qualche alunno di un'ipotetica classe. 
+    Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. 
+    Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
 
 </body>
 
