@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-<h1>
+
+    <h1>
         Snack 2
     </h1>
 
@@ -17,7 +18,7 @@
     un punto e una chiocciola e che age sia un numero. 
     Se tutto è ok stampare "Accesso riuscito", altrimenti "Accesso negato" -->
 
-    <form action="index.php" method="GET">
+    <form action="snack2.php" method="GET">
         <input type="text" name="name">
         <input type="email" name="email">
         <input type="text" name="age">
@@ -28,22 +29,26 @@
     ?>
     <h5>
         <?php
-        $name = $_GET['name'];
-        $mail = $_GET['email'];
-        $age = $_GET['age'];
+            if( isset($_GET['name']) && isset($_GET['email']) && isset($_GET['age'])){
+                $name = $_GET['name'];
+                $mail = $_GET['email'];
+                $age = $_GET['age'];
+                
+                if (!strlen($name > 3) 
+                && (strpos($mail, '@') > 0 
+                && strpos($mail, '.') > 3) 
+                && is_numeric($age)
+                ) {
+                    echo 'Accesso riuscito';
+                } else {
+                    echo 'Accesso negato';
+                }
+            }
+            
+            
 
-        if (
-            !strlen($name > 3)
-            && (strpos($mail, '@') > 0
-            && strpos($mail, '.') > 3)
-            && is_numeric($age)
-        ) {
-            echo 'accesso riuscito';
-        } else {
-            echo 'accesso negato';
-        }
         ?>
     </h5>
-    
+
 </body>
 </html>
