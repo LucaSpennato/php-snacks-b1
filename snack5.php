@@ -55,7 +55,13 @@
 
             <li>
                 <?php
-                    echo $class[$i]['name'];   
+                    $votes = $class[$i]['votes'];
+                    $math = $votes['math'];
+                    $english = $votes['english'];
+                    $science = $votes['science'];
+                    $average =  ($math +  $english + $science) / count($votes);
+
+                    echo $class[$i]['name'] .'  '. $class[$i]['last name'] .' - ' . ' Votes average: ' .  $average;
                 ?>
             </li>
 
