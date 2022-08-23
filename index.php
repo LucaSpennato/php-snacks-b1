@@ -21,62 +21,50 @@
         PHP snack 1
     </h1>
 
-    <p>
-        <?php
-        $games = [
-            [
-                'homeTeam' => 'bulls',
-                'guestTeam' => 'NY',
-                'HTScore' => '76',
-                'GTScore' => '88',
-            ],
-            [
-                'homeTeam' => 'Milano',
-                'guestTeam' => 'Eagles',
-                'HTScore' => '40',
-                'GTScore' => '90',
-            ],
-            [
-                'homeTeam' => 'bulls',
-                'guestTeam' => 'Eagles',
-                'HTScore' => '30',
-                'GTScore' => '60',
-            ],
-            [
-                'homeTeam' => 'NY',
-                'guestTeam' => 'Milano',
-                'HTScore' => '40',
-                'GTScore' => '33',
-            ],
-            [
-                'homeTeam' => 'Eagles',
-                'guestTeam' => 'NY',
-                'HTScore' => '88',
-                'GTScore' => '76',
-            ],
-        ];
-        ?>
-
     <ul>
         <?php 
+            $games = [
+                [
+                    'homeTeam' => 'bulls',
+                    'guestTeam' => 'NY',
+                    'HTScore' => '76',
+                    'GTScore' => '88',
+                ],
+                [
+                    'homeTeam' => 'Milano',
+                    'guestTeam' => 'Eagles',
+                    'HTScore' => '40',
+                    'GTScore' => '90',
+                ],
+                [
+                    'homeTeam' => 'bulls',
+                    'guestTeam' => 'Eagles',
+                    'HTScore' => '30',
+                    'GTScore' => '60',
+                ],
+                [
+                    'homeTeam' => 'NY',
+                    'guestTeam' => 'Milano',
+                    'HTScore' => '40',
+                    'GTScore' => '33',
+                ],
+                [
+                    'homeTeam' => 'Eagles',
+                    'guestTeam' => 'NY',
+                    'HTScore' => '88',
+                    'GTScore' => '76',
+                ],
+            ];
+
             for ($i=0; $i < count($games); $i++) {  ?>
         <li>
             <?php
-                // for ($i = 0; $i < count($games); $i++) {
-                    echo $games[$i]['homeTeam'] . ' - ' . $games[$i]['guestTeam'] . ' | ' . $games[$i]['HTScore'] . ' - ' . $games[$i]['GTScore'];
-                // }
+                echo $games[$i]['homeTeam'] . ' - ' . $games[$i]['guestTeam'] . ' | ' . $games[$i]['HTScore'] . ' - ' . $games[$i]['GTScore'];
             ?>
         </li>
 
         <?php } ?>
     </ul>
-
-    <p>
-        <?php
-        
-        ?>
-    </p>
-
 
     <h1>
         Snack 2
